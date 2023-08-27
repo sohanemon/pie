@@ -6,7 +6,7 @@ export const textVariants = cva(['leading-7'], {
       default: 'text-foreground',
       primary: 'text-primary',
       white: 'text-white',
-      muted: 'text-muted',
+      muted: 'text-white/60',
     },
     intent: {
       heading: 'text-2xl text-white  ',
