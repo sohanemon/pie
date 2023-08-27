@@ -31,7 +31,7 @@ export default function Map({ className, ...props }: MapProps) {
               {item.text && (
                 <Text
                   intent={'heading'}
-                  className="mx-4 mt-4 grow whitespace-nowrap"
+                  className="mt-4 grow whitespace-nowrap text-center  max-[380px]:text-base"
                 >
                   {item.text}
                 </Text>
@@ -68,15 +68,15 @@ const images = [
   },
   {
     image: 'pie-cat.svg',
-    className: '[&>div]:scale-[1.3]',
+    className: '[&>div]:scale-[1.3] ',
   },
   {
     image: 'pie-frog.svg',
-    className: 'relative -z-20',
+    className: 'relative -z-20 -ml-5',
   },
   {
     image: 'pie-dog.svg',
-    className: '[&>div]:scale-[1.3]',
+    className: '[&>div]:scale-[1.3] -ml-4 ',
   },
 ];
 

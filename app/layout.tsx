@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic';
 import { siteConfig } from '@/config/site';
 import { fontSans } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
+import Footer from '@/components/footer';
 import { TailwindIndicator } from '@/components/tailwind-indicator';
 
 const GoToTop = dynamic(() => import('@/components/goto-top'));
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </div>
           <TailwindIndicator />
           <GoToTop />
+          <Footer />
         </body>
       </html>
     </>

@@ -1,4 +1,5 @@
 import { HTMLAttributes } from 'react';
+import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
 import Img from '@/components/ui/img';
@@ -24,13 +25,17 @@ export default function Header({ className, ...props }: HeaderProps) {
         </div>
         <div className="mt-8 grid grid-cols-3 gap-x-1 gap-y-4">
           {socials.map((el) => (
-            <div key={el.label} className="flex items-center gap-2">
+            <Link
+              href={el.href}
+              key={el.label}
+              className="flex items-center gap-2"
+            >
               <Img
                 className="w-6 shrink-0"
                 src={'/public/assets/images/' + el.icon}
               />
               <Text className="">{el.label}</Text>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
