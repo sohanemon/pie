@@ -25,7 +25,10 @@ export default function Header({ className, ...props }: HeaderProps) {
         <div className="mt-8 grid grid-cols-3 gap-x-1 gap-y-4">
           {socials.map((el) => (
             <div key={el.label} className="flex items-center gap-2">
-              <Img className="w-6 shrink-0" src={el.icon} />
+              <Img
+                className="w-6 shrink-0"
+                src={'/public/assets/images/' + el.icon}
+              />
               <Text className="">{el.label}</Text>
             </div>
           ))}
@@ -39,32 +42,32 @@ export default function Header({ className, ...props }: HeaderProps) {
 const socials = [
   {
     label: 'Twitter',
-    icon: '/public/assets/images/twitter.svg',
+    icon: 'twitter.svg',
     href: '',
   },
   {
     label: 'Telegram',
-    icon: '/public/assets/images/telegram.svg',
+    icon: 'telegram.svg',
     href: '',
   },
   {
     label: 'Dextools',
-    icon: '/public/assets/images/dextool.svg',
+    icon: 'dextool.svg',
     href: '',
   },
   {
     label: 'Etherscan',
-    icon: '/public/assets/images/etherscan.svg',
+    icon: 'etherscan.svg',
     href: '',
   },
   {
     label: 'Coinmarke tcap',
-    icon: '/public/assets/images/coinmarke.svg',
+    icon: 'coinmarke.svg',
     href: '',
   },
   {
     label: 'New Crypto Space',
-    icon: '/public/assets/images/crypto-space.svg',
+    icon: 'crypto-space.svg',
     href: '',
   },
 ];
