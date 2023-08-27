@@ -38,7 +38,7 @@ export default async function Img({
       <Image
         src={src!}
         placeholder="blur"
-        className={cn('object-cover', imageClassName)}
+        className={cn('object-contain', imageClassName)}
         alt={props.alt || ''}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

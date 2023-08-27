@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-export const textVariants = cva([], {
+export const textVariants = cva(['leading-7'], {
   variants: {
     color: {
       default: 'text-foreground',
@@ -9,7 +9,7 @@ export const textVariants = cva([], {
       muted: 'text-muted',
     },
     intent: {
-      heading: 'text-[26px]  ',
+      heading: 'text-2xl  ',
       title: 'text-2xl',
     },
     size: {
