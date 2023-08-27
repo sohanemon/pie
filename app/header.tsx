@@ -12,7 +12,7 @@ export default function Header({ className, ...props }: HeaderProps) {
     <>
       <div className={cn('container pt-10', className, {})} {...props}>
         <div className="flex -space-x-14">
-          <Text intent={'heading'} className=" max-w-[70%] text-white">
+          <Text intent={'heading'} className=" max-w-[70%]">
             如果你还没得到Picoin，那么就先吃点PIE吧！毕竟这是小菜一碟！
           </Text>
           <Images.header className="grow translate-x-10" />

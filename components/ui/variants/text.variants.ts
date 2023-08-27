@@ -5,12 +5,12 @@ export const textVariants = cva(['leading-7'], {
     color: {
       default: 'text-foreground',
       primary: 'text-primary',
-      secondary: 'text-secondary',
+      white: 'text-white',
       muted: 'text-muted',
     },
     intent: {
-      heading: 'text-2xl  ',
-      title: 'text-2xl',
+      heading: 'text-2xl text-white  ',
+      title: 'text-2xl text-white',
     },
     size: {
       sm: 'text-xs ',

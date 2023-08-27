@@ -16,8 +16,12 @@ import { Button } from './ui/button';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // #note
   return (
-    <section className="bg-background sticky inset-x-0 top-0 z-40 border-b-2 border-black/10">
+    <Motion
+      initial={{ y: '-100%' }}
+      className="bg-background sticky inset-x-0 top-0 z-40 border-b-2 border-black/10"
+    >
       <nav className="container flex items-center justify-between px-5 py-4 text-xl">
         <div className="flex items-center gap-3">
           {!isMenuOpen ? (
@@ -43,7 +47,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
       </AnimatePresence>
-    </section>
+    </Motion>
   );
 }
 
