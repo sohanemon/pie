@@ -6,15 +6,13 @@ export const Icons = {
   moon: Moon,
   menu: AlignJustify,
   x: X,
-  logo: (props: any) => (
+  pie: (props: any) => (
     <Image
       {...props}
-      priority
-      className=""
-      src={`/cat.png`}
-      alt="logo"
-      width={100}
-      height={100}
+      src="/assets/images/pie.svg"
+      width={50}
+      height={35}
+      alt=""
     />
   ),
 };
