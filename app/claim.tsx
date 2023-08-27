@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import Img from '@/components/ui/img';
 import { Text } from '@/components/ui/text';
 import { Images } from '@/components/images';
+import Motion from '@/components/motion';
 
 interface ClaimProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -26,13 +27,17 @@ export default function Claim({ className, ...props }: ClaimProps) {
           <span className="text-2xl">个</span>
         </div>
         <Text variant="default/default/muted">截至目前空投数量</Text>
-        <div className="mt-10 min-w-[300px] space-y-2.5">
+        <div className="relative mt-10 min-w-[300px] space-y-2.5">
           <Button full className="border" variant="lg/default">
             点击领取
           </Button>
           <Button full variant="lg/outline">
             链接钱包
           </Button>
+          <Img
+            src="/public/assets/images/cloud-eye.svg"
+            className="absolute -right-3 bottom-[94%] w-12"
+          />
         </div>
       </div>
       <Images.hr reverse />

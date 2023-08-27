@@ -19,7 +19,7 @@ export default function Navbar() {
   // #note
   return (
     <Motion
-      initial={{ y: '-100%' }}
+      initial={{ y: '-99%' }}
       className="bg-background sticky inset-x-0 top-0 z-40 border-b-2 border-black/10"
     >
       <nav className="container flex items-center justify-between px-5 py-4 text-xl">
