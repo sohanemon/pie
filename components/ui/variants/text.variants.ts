@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-export const textVariants = cva(['leading-7'], {
+export const textVariants = cva(['leading-7 md:leading-normal'], {
   variants: {
     color: {
       default: 'text-foreground',
@@ -9,14 +9,14 @@ export const textVariants = cva(['leading-7'], {
       muted: 'text-white/60',
     },
     intent: {
-      heading: 'text-2xl text-white  ',
-      title: 'text-2xl text-white',
+      heading: 'text-2xl text-white md:text-[46px] ',
+      title: 'text-2xl md:text-[40px] text-white',
     },
     size: {
-      sm: 'text-xs ',
-      default: 'text-sm ',
+      sm: 'text-xs md:text-xl',
+      default: 'text-sm md:text-3xl',
       base: 'text-base ',
-      lg: 'text-xl ',
+      lg: 'text-xl md:text-[32px]',
     },
     weight: {
       default: 'font-normal',

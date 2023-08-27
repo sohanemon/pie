@@ -19,11 +19,11 @@ export default function HowTo({ className, ...props }: HowToProps) {
           {cards.map((card) => (
             <div
               key={card.label}
-              className="bg-primary flex items-start gap-1 rounded-2xl border px-4 py-3.5"
+              className="bg-primary flex items-start gap-1 rounded-2xl border px-4 py-3.5 md:px-10 md:py-8"
             >
               <Img
                 src={'/public/assets/images/' + card.icon}
-                className="h-20 w-20 shrink-0 -translate-x-2"
+                className="h-20 w-20 shrink-0 -translate-x-2 md:h-40 md:w-40 md:-translate-x-7"
               />
               <div>
                 <Text variant="lg/default/default">{card.label}</Text>

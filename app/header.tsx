@@ -13,17 +13,17 @@ export default function Header({ className, ...props }: HeaderProps) {
     <>
       <div className={cn('container pt-10', className, {})} {...props}>
         <div className="flex -space-x-14">
-          <Text intent={'heading'} className=" max-w-[70%]">
+          <Text intent={'heading'} className=" max-w-[70%] md:leading-normal">
             如果你还没得到Picoin，那么就先吃点PIE吧！毕竟这是小菜一碟！
           </Text>
-          <Images.header className="grow translate-x-10" />
+          <Images.header className="grow translate-x-10 md:h-96" />
         </div>
-        <div className="bg-primary -mt-14 rounded-full px-4 py-1 ">
+        <div className="bg-primary -mt-14 rounded-full px-4 py-1 md:-mt-32 md:px-8 md:py-4 ">
           <Text className="max-w-[70%] ">
             PIE是Picoin开源之前的第一个MEME币，真正的PIE。
           </Text>
         </div>
-        <div className="mt-8 grid grid-cols-3 gap-x-1 gap-y-4">
+        <div className="mt-8 grid grid-cols-3 gap-x-1 gap-y-4 md:mt-20">
           {socials.map((el) => (
             <Link
               href={el.href}
@@ -31,7 +31,7 @@ export default function Header({ className, ...props }: HeaderProps) {
               className="flex items-center gap-2"
             >
               <Img
-                className="w-6 shrink-0"
+                className="w-6 shrink-0 md:w-12"
                 src={'/public/assets/images/' + el.icon}
               />
               <Text className="">{el.label}</Text>
