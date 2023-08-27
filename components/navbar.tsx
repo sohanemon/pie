@@ -7,35 +7,38 @@ import { AnimatePresence } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
 import { cn, isNavActive } from '@/lib/utils';
+import useClickOutside from '@/hooks/click-outside';
 
 import Brand from './brand';
 import { Icons } from './icons';
 import Motion from './motion';
-import { ThemeToggle } from './theme-toggle';
+import { Button } from './ui/button';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <section className="bg-background sticky inset-x-0 top-0 z-40">
-      <nav className="container flex items-center justify-between px-5 py-9">
-        <div className="flex items-center gap-4">
-          <Brand />
-          <ThemeToggle />
+    <section className="bg-background sticky inset-x-0 top-0 z-40 border-b-2 border-black/10">
+      <nav className="container flex items-center justify-between px-5 py-4 text-xl">
+        <div className="flex items-center gap-3">
+          {!isMenuOpen ? (
+            <Icons.menu
+              onClick={() => setIsMenuOpen(true)}
+              size={36}
+              className="text-primary cursor-pointer lg:hidden"
+            />
+          ) : (
+            <Icons.x
+              onClick={() => setIsMenuOpen(false)}
+              size={36}
+              className="text-primary cursor-pointer lg:hidden"
+            />
+          )}
+          <div className="flex items-center gap-4">
+            <Brand />
+          </div>
         </div>
         <NavContent />
-        {!isMenuOpen ? (
-          <Icons.menu
-            onClick={() => setIsMenuOpen(true)}
-            size={36}
-            className="text-foreground cursor-pointer lg:hidden"
-          />
-        ) : (
-          <Icons.x
-            onClick={() => setIsMenuOpen(false)}
-            size={36}
-            className="text-foreground cursor-pointer lg:hidden"
-          />
-        )}
+        <Button>购买</Button>
       </nav>
       <AnimatePresence>
         {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
@@ -56,15 +59,9 @@ const NavContent = () => {
               'text-primary': isNavActive(_.href, path),
             })}
           >
-            <h3 className="px-3 capitalize">
+            <h3 className="capitalize">
               <Link href={_.href}>{_.title}</Link>
             </h3>
-            {isNavActive(_.href, path) && (
-              <Motion
-                layoutId="nav-bg"
-                className="bg-primary/10 absolute inset-0 -z-10 rounded-md "
-              />
-            )}
           </li>
         ))}
       </ul>
@@ -73,22 +70,27 @@ const NavContent = () => {
 };
 
 const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
+  // #note
+  const ref = useClickOutside(() => setIsMenuOpen(false));
+
   return (
-    <Motion
-      key={'header'}
-      as={'ul'}
-      initial="up"
-      animate="visible"
-      exit={'left'}
-      className="bg-card absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl p-5 shadow-xl lg:hidden"
-    >
-      {siteConfig.nav.map((_) => (
-        <li onClick={() => setIsMenuOpen(false)} key={_.title}>
-          <h3 className="hover:text-primary/50 capitalize">
-            <Link href={_.href}>{_.title}</Link>
-          </h3>
-        </li>
-      ))}
-    </Motion>
+    <div ref={ref}>
+      <Motion
+        key={'header'}
+        as={'ul'}
+        initial="left"
+        animate="visible"
+        exit={'right'}
+        className="bg-primary absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl p-5 shadow-xl lg:hidden"
+      >
+        {siteConfig.nav.map((_) => (
+          <li onClick={() => setIsMenuOpen(false)} key={_.title}>
+            <h3 className="hover:text-background capitalize">
+              <Link href={_.href}>{_.title}</Link>
+            </h3>
+          </li>
+        ))}
+      </Motion>
+    </div>
   );
 };

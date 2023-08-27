@@ -1,9 +1,9 @@
 import { forwardRef } from 'react';
 
-import { TextProps, TextVariantsType } from '@/types/text';
+import { TextProps, TextVariantsType } from '@/types/text.types';
 import { cn } from '@/lib/utils';
 
-import { textVariants } from './variants/text-variants';
+import { textVariants } from './variants/text.variants';
 
 const Text = forwardRef<HTMLParagraphElement, TextProps>(
   ({ className, as, variant = 'default/default', intent, ...props }, ref) => {

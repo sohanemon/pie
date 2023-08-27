@@ -18,7 +18,7 @@ export const buttonVariants = cva(
         link: 'underline-offset-4 underline text-foreground',
       },
       size: {
-        default: 'h-10 py-2 px-4',
+        default: 'h-[34px] py-2.5 min-w-[100px] px-4',
         sm: 'h-9 px-3 rounded-md',
         lg: 'h-11 px-8 rounded-md',
         icon: 'h-10 w-10',
