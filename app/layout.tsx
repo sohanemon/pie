@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@/context/theme-provider';
 import TransitionProvider from '@/context/transition-provider';
 
 import '@/styles/custom.css';
@@ -46,16 +45,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <Navbar />
-              <div className="flex-1">
-                <TransitionProvider>{children}</TransitionProvider>
-              </div>
+          <div className="relative flex min-h-screen flex-col">
+            <Navbar />
+            <div className="flex-1">
+              <TransitionProvider>{children}</TransitionProvider>
             </div>
-            <TailwindIndicator />
-            <GoToTop />
-          </ThemeProvider>
+          </div>
+          <TailwindIndicator />
+          <GoToTop />
         </body>
       </html>
     </>
