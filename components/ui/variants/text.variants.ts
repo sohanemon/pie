@@ -15,6 +15,7 @@ export const textVariants = cva(['leading-7'], {
     size: {
       sm: 'text-xs ',
       default: 'text-sm ',
+      base: 'text-base ',
       lg: 'text-xl ',
     },
     weight: {
