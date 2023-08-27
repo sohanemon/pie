@@ -32,7 +32,7 @@ export default function About({ className, ...props }: AboutProps) {
           </ul>
         </div>
       </div>
-      <Images.hr />
+      <Images.hr reverse />
     </>
   );
 }
