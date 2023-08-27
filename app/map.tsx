@@ -12,7 +12,7 @@ export default function Map({ className, ...props }: MapProps) {
   return (
     <>
       <div className={cn('container ', className, {})} {...props}>
-        <div className="-mb-1 flex ">
+        <div className="-mb-1 flex md:-mb-5 md:gap-14 md:pr-12">
           {images.map((item) => (
             <>
               {item.image && (
@@ -24,7 +24,7 @@ export default function Map({ className, ...props }: MapProps) {
                 >
                   <Img
                     src={'/public/assets/images/' + item.image}
-                    className="h-16 w-20"
+                    className="h-16 w-20 md:h-36 md:w-28"
                   />
                 </Motion>
               )}
@@ -39,15 +39,25 @@ export default function Map({ className, ...props }: MapProps) {
             </>
           ))}
         </div>
-        <div className="bg-primary space-y-5 rounded-2xl border px-5 py-8">
+        <div className="bg-primary rounded-2xl border px-5 py-8 max-md:space-y-5 md:flex md:gap-11 md:p-12">
           {texts.map((item, idx) => (
-            <div key={item.label} className="flex items-start gap-3">
-              <p className=" w-8 bg-gradient-to-t from-transparent to-white bg-clip-text text-6xl font-normal leading-9 text-transparent">
+            <div
+              key={item.label}
+              className="flex items-start gap-3 md:flex-col md:items-center md:text-center "
+            >
+              <p className=" w-8 bg-gradient-to-t from-transparent to-white bg-clip-text text-6xl font-normal leading-9 text-transparent md:-translate-y-3">
                 {idx + 1}
               </p>
               <div>
-                <Text variant="lg/default/default">{item.label}</Text>
-                <Text variant="default/default/default">{item.text}</Text>
+                <Text
+                  variant="lg/default/default"
+                  className=" md:-translate-y-5"
+                >
+                  {item.label}
+                </Text>
+                <Text variant="default/default/default" className="md:text-xl">
+                  {item.text}
+                </Text>
               </div>
             </div>
           ))}
@@ -62,13 +72,14 @@ export default function Map({ className, ...props }: MapProps) {
 const images = [
   {
     image: 'insect.svg',
+    className: '[&>div]:md:scale-[1.15 ]',
   },
   {
     text: '路线图',
   },
   {
     image: 'pie-cat.svg',
-    className: '[&>div]:scale-[1.3] ',
+    className: '[&>div]:scale-[1.2] ',
   },
   {
     image: 'pie-frog.svg',
@@ -76,7 +87,7 @@ const images = [
   },
   {
     image: 'pie-dog.svg',
-    className: '[&>div]:scale-[1.3] -ml-4 ',
+    className: '[&>div]:scale-[1.2] -ml-4 ',
   },
 ];
 

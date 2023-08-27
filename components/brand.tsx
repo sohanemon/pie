@@ -17,8 +17,10 @@ export default function Brand({
       {...props}
       className={cn('flex items-center gap-1', {}, className)}
     >
-      <Icons.pie />
-      <h1 className="text-primary fobo font-mono text-3xl font-bold italic tracking-widest">
+      <div className="relative h-9 w-12 md:h-12 md:w-20">
+        <Icons.pie />
+      </div>
+      <h1 className="text-primary fobo font-mono text-3xl font-bold italic tracking-widest md:text-5xl">
         pie
       </h1>
     </Link>

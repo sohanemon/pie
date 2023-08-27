@@ -7,12 +7,6 @@ export const Icons = {
   menu: AlignJustify,
   x: X,
   pie: (props: any) => (
-    <Image
-      {...props}
-      src="/assets/images/pie.svg"
-      width={50}
-      height={35}
-      alt=""
-    />
+    <Image {...props} src="/assets/images/pie.svg" fill alt="" />
   ),
 };
