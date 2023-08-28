@@ -9,13 +9,13 @@ import TokenModel from './token-model';
 export default async function IndexPage() {
   return (
     <>
-      <Header />
-      <About />
-      <HowTo />
-      <Claim />
-      <Pledge />
-      <TokenModel />
-      <Map />
+      <Header id="首页" />
+      <About id="项目介绍" />
+      <HowTo id="如何购买" />
+      <Claim id="领取空投" />
+      <Pledge id="质押挖矿" />
+      <TokenModel id="代币模型" />
+      <Map id="路线图" />
     </>
   );
 }

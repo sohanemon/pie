@@ -18,7 +18,7 @@ export default function TokenModel({ className, ...props }: TokenModelProps) {
         <div className="flex flex-col items-center md:flex-row lg:[&>*]:basis-full">
           <Img
             src="/public/assets/images/pie-eaten.svg"
-            className="lg:scale-[0.8 ] w-52 origin-top md:min-w-[385px] lg:min-w-[400px]"
+            className="w-52 origin-top md:min-w-[385px] lg:min-w-[400px] lg:scale-75"
           />
           <div>
             <div className="bg-primary relative -mt-4 rounded-2xl border p-5">

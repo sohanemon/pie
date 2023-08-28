@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import Img from '@/components/ui/img';
 import { Text } from '@/components/ui/text';
+import { Icons } from '@/components/icons';
 import { Images } from '@/components/images';
 
 interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}
@@ -13,12 +14,19 @@ export default function Header({ className, ...props }: HeaderProps) {
     <>
       <div className={cn('container pt-10 lg:mb-32', className, {})} {...props}>
         <div className="flex -space-x-14">
-          <Text intent={'heading'} className=" max-w-[70%] md:leading-normal ">
+          <Text
+            intent={'heading'}
+            className="relative max-w-[70%] md:leading-normal "
+          >
+            <Icons.quoteYellow className="ml-20" />
+            <Icons.wave className="ml-[50%]" />
             如果你还没得到Picoin，那么就先吃点PIE吧！毕竟这是小菜一碟！
+            <Icons.quoteBlue className="ml-[70%]" />
           </Text>
-          <Images.header className="grow translate-x-10 md:h-96 lg:h-[480px]" />
+          <Images.header className="relative z-10 grow translate-x-10 md:h-96 lg:h-[480px]" />
         </div>
-        <div className="bg-primary -mt-14 rounded-full px-4 py-1 md:-mt-32 md:px-8 md:py-4 lg:-mt-64 ">
+        <div className="bg-primary relative -mt-14  rounded-full px-4 py-1 md:-mt-32 md:px-8 md:py-4 lg:-mt-64 ">
+          <Icons.brow className="absolute -left-4 top-0" />
           <Text className="max-w-[70%] ">
             PIE是Picoin开源之前的第一个MEME币，真正的PIE。
           </Text>

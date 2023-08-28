@@ -19,7 +19,7 @@ export default function Navbar() {
   // #note
   return (
     <Motion
-      initial={{ y: '-99%' }}
+      initial={{ y: '-90%' }}
       className="bg-background sticky inset-x-0 top-0 z-40 border-b-2 border-black/10"
     >
       <nav className="container flex items-center justify-between px-5 py-4 text-xl">
@@ -43,6 +43,7 @@ export default function Navbar() {
         </div>
         <NavContent />
         <Button>购买</Button>
+        <Button variant="default/ghost">中文/English</Button>
       </nav>
       <AnimatePresence>
         {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
@@ -55,12 +56,12 @@ const NavContent = () => {
   const path = usePathname();
   return (
     <>
-      <ul className="ml-20 flex items-center gap-12 max-lg:hidden ">
+      <ul className="ml-20 flex items-center gap-6 max-lg:hidden ">
         {siteConfig.nav.map((_) => (
           <li
             key={_.title}
             className={cn('relative', {
-              'text-primary': isNavActive(_.href, path),
+              'text-primary hover:text-white': isNavActive(_.href, path),
             })}
           >
             <h3 className="capitalize">
