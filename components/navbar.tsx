@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import { AnimatePresence } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
-import useClickOutside from '@/hooks/click-outside';
 
 import Brand from './brand';
 import { Icons } from './icons';
@@ -18,7 +17,8 @@ export default function Navbar() {
   // #note
   return (
     <Motion
-      initial={{ y: '-90%' }} animate={{ y: 0 }}
+      initial={{ y: '-90%' }}
+      animate={{ y: 0 }}
       className="bg-background sticky inset-x-0 top-0 z-40 border-b-2 border-black/10"
     >
       <nav className="container flex items-center justify-between px-5 py-4 text-xl">
@@ -42,7 +42,9 @@ export default function Navbar() {
         </div>
         <NavContent />
         <Button>购买</Button>
-        <Button variant="default/ghost" className='max-md:hidden'>中文/English</Button>
+        <Button variant="default/ghost" className="max-md:hidden">
+          中文/English
+        </Button>
       </nav>
       <AnimatePresence>
         {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
@@ -70,10 +72,9 @@ const NavContent = () => {
 
 const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
   // #note
-  const ref = useClickOutside(() => setIsMenuOpen(false));
 
   return (
-    <div ref={ref}>
+    <div>
       <Motion
         key={'header'}
         as={'ul'}

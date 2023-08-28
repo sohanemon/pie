@@ -30,6 +30,7 @@ export default function Map({ className, ...props }: MapProps) {
               )}
               {item.text && (
                 <Text
+                  key={item.text}
                   intent={'heading'}
                   className="mt-4 grow whitespace-nowrap text-center max-[380px]:text-base  lg:mt-8"
                 >
