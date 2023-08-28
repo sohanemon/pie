@@ -18,15 +18,15 @@ export default function Header({ className, ...props }: HeaderProps) {
             intent={'heading'}
             className="relative max-w-[70%] md:leading-normal "
           >
-            <Icons.quoteYellow className="ml-20" />
-            <Icons.wave className="ml-[50%]" />
+            <Icons.quoteYellow className="ml-20 max-lg:scale-75 max-md:scale-50 " />
+            <Icons.wave className="ml-[50%] max-lg:scale-75 max-md:scale-50 " />
             如果你还没得到Picoin，那么就先吃点PIE吧！毕竟这是小菜一碟！
-            <Icons.quoteBlue className="ml-[70%]" />
+            <Icons.quoteBlue className="ml-[70%] max-lg:scale-75 max-md:scale-50 " />
           </Text>
           <Images.header className="relative z-10 grow translate-x-10 md:h-96 lg:h-[480px]" />
         </div>
         <div className="bg-primary relative -mt-14  rounded-full px-4 py-1 md:-mt-32 md:px-8 md:py-4 lg:-mt-64 ">
-          <Icons.brow className="absolute -left-4 top-0" />
+          <Icons.brow className="absolute -left-4 top-0 max-lg:scale-75 max-md:scale-50 " />
           <Text className="max-w-[70%] ">
             PIE是Picoin开源之前的第一个MEME币，真正的PIE。
           </Text>

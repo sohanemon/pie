@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation';
 import { AnimatePresence } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
-import { cn, isNavActive } from '@/lib/utils';
 import useClickOutside from '@/hooks/click-outside';
 
 import Brand from './brand';
@@ -58,12 +57,7 @@ const NavContent = () => {
     <>
       <ul className="ml-20 flex items-center gap-6 max-lg:hidden ">
         {siteConfig.nav.map((_) => (
-          <li
-            key={_.title}
-            className={cn('relative', {
-              'text-primary hover:text-white': isNavActive(_.href, path),
-            })}
-          >
+          <li key={_.title} className="text-primary relative hover:text-white">
             <h3 className="capitalize">
               <Link href={_.href}>{_.title}</Link>
             </h3>
