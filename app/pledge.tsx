@@ -21,29 +21,26 @@ export default function Pledge({ className, ...props }: PledgeProps) {
       >
         <Text intent={'heading'}>领取空头</Text>
         <Button variant="lg/outline">链接钱包</Button>
-        <div className="mt-12 grid grid-cols-2 gap-x-4 gap-y-12">
+        <div className="mt-12 grid grid-cols-2 gap-x-4 gap-y-12 lg:flex lg:w-full lg:justify-between">
           {cards.map((card) => (
             <div
               key={card.tag}
-              className="flex flex-col items-center gap-2.5 rounded-2xl bg-black/10 p-3.5"
+              className="flex flex-col items-center gap-2.5 rounded-2xl bg-black/10 p-3.5 lg:p-5"
             >
               <Img
                 src="/public/assets/images/pie.svg"
-                className="-mt-12 h-24 w-32"
+                className="-mt-12 h-24 w-32 lg:-mt-20 lg:h-40 lg:w-56"
               />
               <Text
                 variant="sm/default/white"
-                className="rounded-full px-3 ring-2 ring-white"
+                className="bg-background rounded-full px-3 ring-2 ring-white"
               >
                 {card.tag}
               </Text>
               <Text variant="lg/default/white" className="text-center">
                 {card.label}
               </Text>
-              <Button
-                className="rounded-[10px] border text-xs"
-                variant="sm/default"
-              >
+              <Button className="rounded-[10px] border max-sm:text-xs" full>
                 解除质押，领取奖励
               </Button>
             </div>

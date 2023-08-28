@@ -10,24 +10,28 @@ interface HowToProps extends HTMLAttributes<HTMLDivElement> {}
 export default function HowTo({ className, ...props }: HowToProps) {
   return (
     <>
-      <div className={cn('container', className, {})} {...props}>
-        <div className="mb-4 flex items-center justify-center gap-2 ">
+      <div className={cn('container lg:mb-12', className, {})} {...props}>
+        <div className="mb-4 flex items-center justify-center gap-2 lg:my-10 ">
           <Text intent={'title'}>如何购买</Text>{' '}
-          <Img src="/public/assets/images/eyebox.svg" className="w-9" />,
+          <Img
+            src="/public/assets/images/eyebox.svg"
+            className="w-9 md:w-12 lg:w-16"
+          />
+          ,
         </div>
-        <div className="space-y-3.5">
+        <div className="space-y-3.5 lg:space-y-20">
           {cards.map((card) => (
             <div
               key={card.label}
-              className="bg-primary flex items-start gap-1 rounded-2xl border px-4 py-3.5 md:px-10 md:py-8"
+              className="bg-primary flex items-start gap-1 rounded-2xl border px-4 py-3.5 md:px-10 md:py-8 lg:max-h-52"
             >
               <Img
                 src={'/public/assets/images/' + card.icon}
-                className="h-20 w-20 shrink-0 -translate-x-2 md:h-40 md:w-40 md:-translate-x-7"
+                className="h-20 w-20 shrink-0 -translate-x-2 md:h-40 md:w-40 md:-translate-x-7 lg:h-56 lg:w-48 lg:-translate-y-16"
               />
               <div>
                 <Text variant="lg/default/default">{card.label}</Text>
-                <Text>{card.text}</Text>
+                <Text className="lg:text-2xl">{card.text}</Text>
               </div>
             </div>
           ))}

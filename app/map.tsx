@@ -11,8 +11,8 @@ interface MapProps extends HTMLAttributes<HTMLDivElement> {}
 export default function Map({ className, ...props }: MapProps) {
   return (
     <>
-      <div className={cn('container ', className, {})} {...props}>
-        <div className="-mb-1 flex md:-mb-5 md:gap-14 md:pr-12">
+      <div className={cn('container lg:mt-12', className, {})} {...props}>
+        <div className="-mb-1 flex md:-mb-5 md:gap-14 md:pr-12 lg:gap-20">
           {images.map((item) => (
             <>
               {item.image && (
@@ -24,14 +24,14 @@ export default function Map({ className, ...props }: MapProps) {
                 >
                   <Img
                     src={'/public/assets/images/' + item.image}
-                    className="h-16 w-20 md:h-36 md:w-28"
+                    className="h-16 w-20 md:h-36 md:w-28 lg:h-48 lg:w-40"
                   />
                 </Motion>
               )}
               {item.text && (
                 <Text
                   intent={'heading'}
-                  className="mt-4 grow whitespace-nowrap text-center  max-[380px]:text-base"
+                  className="mt-4 grow whitespace-nowrap text-center max-[380px]:text-base  lg:mt-8"
                 >
                   {item.text}
                 </Text>
@@ -39,13 +39,13 @@ export default function Map({ className, ...props }: MapProps) {
             </>
           ))}
         </div>
-        <div className="bg-primary rounded-2xl border px-5 py-8 max-md:space-y-5 md:flex md:gap-11 md:p-12">
+        <div className="bg-primary rounded-2xl border  px-5 py-8 max-md:space-y-5 md:flex md:gap-11 md:p-12 lg:justify-evenly">
           {texts.map((item, idx) => (
             <div
               key={item.label}
               className="flex items-start gap-3 md:flex-col md:items-center md:text-center "
             >
-              <p className=" w-8 bg-gradient-to-t from-transparent to-white bg-clip-text text-6xl font-normal leading-9 text-transparent md:-translate-y-3">
+              <p className=" w-8 bg-gradient-to-t from-transparent to-white bg-clip-text text-6xl font-normal leading-9 text-transparent md:-translate-y-3 lg:w-16 lg:translate-y-4 lg:text-[120px] lg:leading-[3rem] ">
                 {idx + 1}
               </p>
               <div>
@@ -55,7 +55,10 @@ export default function Map({ className, ...props }: MapProps) {
                 >
                   {item.label}
                 </Text>
-                <Text variant="default/default/default" className="md:text-xl">
+                <Text
+                  variant="default/default/default"
+                  className="md:max-w-[200px]  md:text-xl"
+                >
                   {item.text}
                 </Text>
               </div>
@@ -63,6 +66,7 @@ export default function Map({ className, ...props }: MapProps) {
           ))}
         </div>
       </div>
+      <br />
       <br />
       <Images.hr />
     </>
@@ -72,7 +76,7 @@ export default function Map({ className, ...props }: MapProps) {
 const images = [
   {
     image: 'insect.svg',
-    className: '[&>div]:md:scale-[1.15 ]',
+    className: '[&>div]:md:scale-[1.15]',
   },
   {
     text: '路线图',

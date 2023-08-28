@@ -8,7 +8,7 @@ import TokenModel from './token-model';
 
 export default async function IndexPage() {
   return (
-    <main className=" ">
+    <>
       <Header />
       <About />
       <HowTo />
@@ -16,6 +16,6 @@ export default async function IndexPage() {
       <Pledge />
       <TokenModel />
       <Map />
-    </main>
+    </>
   );
 }

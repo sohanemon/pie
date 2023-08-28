@@ -12,18 +12,21 @@ export default function About({ className, ...props }: AboutProps) {
     <>
       <div
         className={cn(
-          '-ml-12 grid grid-cols-2 items-center gap-7 px-4 md:container',
+          '-ml-12 grid grid-cols-2 items-center gap-7 px-4 md:container lg:mb-32',
           className,
           {}
         )}
         {...props}
       >
-        <Img src="/public/assets/images/lifebuoy.png" />
+        <Img
+          src="/public/assets/images/lifebuoy.png"
+          className="lg:max-w-[490px]"
+        />
         <div>
           <Text className="mb-2 " intent={'title'}>
             项目介绍
           </Text>
-          <ul className="list-disc marker:text-white">
+          <ul className="list-disc marker:text-white lg:space-y-2">
             {list.map((listItem) => (
               <Text as={'li'} variant="sm/default/white" key={listItem}>
                 {listItem}

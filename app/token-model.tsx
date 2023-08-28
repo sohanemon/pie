@@ -15,14 +15,14 @@ export default function TokenModel({ className, ...props }: TokenModelProps) {
         {...props}
       >
         <Text intent={'heading'}>代币模型</Text>
-        <div className="flex flex-col items-center md:flex-row">
+        <div className="flex flex-col items-center md:flex-row lg:[&>*]:basis-full">
           <Img
             src="/public/assets/images/pie-eaten.svg"
-            className="w-52 md:min-w-[385px]"
+            className="lg:scale-[0.8 ] w-52 origin-top md:min-w-[385px] lg:min-w-[400px]"
           />
           <div>
             <div className="bg-primary relative -mt-4 rounded-2xl border p-5">
-              <div className="bg-primary absolute top-0 mx-auto -mt-2 h-3.5 w-3.5 rotate-45 border-l max-md:inset-x-0 max-md:border-t  md:-left-2 md:top-12 md:border-b" />
+              <div className="bg-primary -b absolute top-0 mx-auto -mt-2 h-3.5 w-3.5 rotate-45 border-l max-md:inset-x-0  max-md:border-t md:-left-2 md:top-12 md:border-b" />
               <Text variant="base/default/default">
                 用数学公式描述出经济活动参与者在约束下的最大化行为，推导出可以回答特定问题的定性结论（变大还是变小）。
                 经验模型
@@ -31,7 +31,7 @@ export default function TokenModel({ className, ...props }: TokenModelProps) {
             </div>
             <Img
               src="/public/assets/images/guiter.svg"
-              className="relative -mt-12 ml-auto mr-3 h-28 w-20 "
+              className="relative -mt-12 ml-auto mr-3 h-28 w-20 lg:h-36 lg:w-36"
             />
           </div>
         </div>
