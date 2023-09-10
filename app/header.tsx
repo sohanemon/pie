@@ -14,12 +14,9 @@ export default function Header({ className, ...props }: HeaderProps) {
     <>
       <div className={cn('container pt-10 lg:mb-32', className, {})} {...props}>
         <div className="flex -space-x-14">
-          <Text
-            intent={'heading'}
-            className="relative max-w-[70%] md:leading-normal "
-          >
-            <Icons.quoteYellow className="ml-20 max-lg:scale-75 max-md:scale-50 " />
-            <Icons.wave className="ml-[50%] max-lg:scale-75 max-md:scale-50 " />
+          <Text intent={'heading'} className="relative max-w-[70%] ">
+            <Icons.quoteYellow className="ml-20 hidden max-lg:scale-75 max-md:scale-50 md:block" />
+            <Icons.wave className="ml-[50%] hidden max-lg:scale-75 max-md:scale-50 md:block" />
             如果你还没得到Picoin，那么就先吃点PIE吧！毕竟这是小菜一碟！
             <Icons.quoteBlue className="ml-[70%] max-lg:scale-75 max-md:scale-50 " />
           </Text>
