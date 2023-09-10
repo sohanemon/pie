@@ -19,7 +19,7 @@ export default function Pledge({ className, ...props }: PledgeProps) {
         )}
         {...props}
       >
-        <Text intent={'heading'}>领取空头</Text>
+        <Text intent={'heading'}>领取空投</Text>
         <Button variant="lg/outline">链接钱包</Button>
         <div className="mt-12 grid grid-cols-2 gap-x-4 gap-y-12 lg:flex lg:w-full lg:justify-between">
           {cards.map((card) => (

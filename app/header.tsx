@@ -75,7 +75,7 @@ const socials = [
     href: '',
   },
   {
-    label: 'Coinmarke tcap',
+    label: 'Coinmarketcap',
     icon: 'coinmarke.svg',
     href: '',
   },

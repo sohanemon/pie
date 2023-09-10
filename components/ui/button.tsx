@@ -15,6 +15,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       asChild = false,
       target,
       href,
+      full = false,
       ...props
     },
     ref
@@ -31,7 +32,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <LinkComp {...anchorProps}>
         <Comp
           className={cn(buttonVariants({ intent, size, className }), {
-            'w-full': props.full,
+            'w-full': full,
           })}
           ref={ref}
           {...props}

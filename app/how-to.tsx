@@ -56,7 +56,7 @@ const cards = [
   {
     label: '第三步转到Uniswap',
     icon: 'unicorn.svg',
-    text: '连接到Uniswap。在谷歌chrome或Metamask应用程序内的浏览器上访问 app.uniswap.org。连接您的钱包。将$PIE令牌合约地址粘贴到Uniswap中，选择PIE，然后确认。当Metamask或欧意钱包提示您输入钱包签老时，请签名。',
+    text: '连接到Uniswap。在谷歌chrome或Metamask应用程序内的浏览器上访问 app.uniswap.org。连接您的钱包。将$PIE令牌合约地址粘贴到Uniswap中，选择PIE，然后确认。当Metamask或欧意钱包提示您输入钱包签名时，请签名。',
   },
   {
     label: '第四步将ETH兑换为$PIE',

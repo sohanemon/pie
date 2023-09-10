@@ -19,7 +19,7 @@ export default function Claim({ className, ...props }: ClaimProps) {
         )}
         {...props}
       >
-        <Text intent={'heading'}>领取空头</Text>
+        <Text intent={'heading'}>领取空投</Text>
         <div className="flex flex-col items-center md:flex-row md:justify-center md:gap-10">
           <Img
             src="/public/assets/images/cloud-box.svg"
