@@ -25,8 +25,9 @@ export default function Claim({ className, ...props }: ClaimProps) {
             src="/public/assets/images/cloud-box.svg"
             className="md:min-w-full md:basis-1/2 md:-translate-x-20"
           />
-          <div className="flex-col items-center max-md:flex">
-            <div className="text-primary text-[120px] leading-3 md:text-[160px]">
+          <div className="flex-col items-center max-md:flex min-w-[320px]">
+            <Text intent={'heading'}>即将开启</Text>
+            {/* <div className="text-primary text-[120px] leading-3 md:text-[160px]">
               200
               <span className="text-2xl ">个</span>
             </div>
@@ -42,7 +43,7 @@ export default function Claim({ className, ...props }: ClaimProps) {
                 src="/public/assets/images/cloud-eye.svg"
                 className="absolute -right-3 bottom-[94%] w-12 md:-right-16 md:bottom-[120%] md:w-24"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -37,7 +37,7 @@ export default function About({ className, ...props }: AboutProps) {
               &#36;PIE永远支持Pinetwork，永远属于人民的加密硬币!
             </Text>
             <Text as={'li'} variant="sm/default/white">
-              在全球数千万先锋的推动力量下诞生，$PIE为你指明方向，向伟大前进！
+              在全球数千万先锋的推动力量下诞生，&#36;PIE为你指明方向，向伟大前进！
             </Text>
           </ul>
         </div>

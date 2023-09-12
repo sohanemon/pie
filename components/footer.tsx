@@ -32,7 +32,7 @@ export default function Footer({ className, ...props }: FooterProps) {
             variant="default/default/white"
             className="max-w-sm text-center leading-loose md:max-w-lg md:text-2xl"
           >
-            $PIE可能是一种没有内在价值或财务回报预期的模因硬币。
+            &#36;PIE可能是一种没有内在价值或财务回报预期的模因硬币。
             可能没有正式的团队或路线图。
             这枚硬币可能完全没用，可能只是为了娱乐。
             可能只是为了催促Pinetwork能加快速度。
@@ -72,7 +72,7 @@ const socials = [
   {
     label: 'Twitter',
     icon: 'twitter.svg',
-    href: '',
+    href: 'https://twitter.com/piepiecoin',
   },
   {
     label: 'Telegram',

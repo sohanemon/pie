@@ -51,16 +51,16 @@ const cards = [
   {
     label: '第二步获取ETH',
     icon: 'eth.svg',
-    text: '在钱包里存一些ETH(arbitrum链)以兑换$PIE。如果你没有任何ETH(arbitrum链)，你可以直接在metamask上购买，从另一个钱包转账,或者在另一个交易所购买并发送到你的钱包。',
+    text: '在钱包里存一些ETH (arbitrum链)以兑换&#36;PIE。如果你没有任何ETH (arbitrum链)，你可以直接在metamask上购买，从另一个钱包转账,或者在另一个交易所购买并发送到你的钱包。',
   },
   {
     label: '第三步转到Uniswap',
     icon: 'unicorn.svg',
-    text: '连接到Uniswap。在谷歌chrome或Metamask应用程序内的浏览器上访问 app.uniswap.org。连接您的钱包。将$PIE令牌合约地址粘贴到Uniswap中，选择PIE，然后确认。当Metamask或欧意钱包提示您输入钱包签名时，请签名。',
+    text: '连接到Uniswap。在谷歌chrome或Metamask应用程序内的浏览器上访问 app.uniswap.org。连接您的钱包。将&#36;PIE令牌合约地址粘贴到Uniswap中，选择PIE，然后确认。当Metamask或欧意钱包提示您输入钱包签名时，请签名。',
   },
   {
-    label: '第四步将ETH兑换为$PIE',
+    label: '第四步将ETH兑换为&#36;PIE',
     icon: 'pie.svg',
-    text: '将ETH兑换为$PIE。因为链上交易费会有波动，所以注意手续费和滑点。',
+    text: '将ETH兑换为&#36;PIE。因为链上交易费会有波动，所以注意手续费和滑点。',
   },
 ];

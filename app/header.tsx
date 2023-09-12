@@ -54,7 +54,7 @@ const socials = [
   {
     label: 'Twitter',
     icon: 'twitter.svg',
-    href: '',
+    href: 'https://twitter.com/piepiecoin',
   },
   {
     label: 'Telegram',
