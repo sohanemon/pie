@@ -43,7 +43,7 @@ export default function Navbar() {
         <NavContent />
         <Button>购买</Button>
         <Button variant="default/ghost" className="max-md:hidden">
-          中文/English
+          English/中文
         </Button>
       </nav>
       <AnimatePresence>

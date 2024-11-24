@@ -13,8 +13,8 @@ export default function Map({ className, ...props }: MapProps) {
     <>
       <div className={cn('container lg:mt-12', className, {})} {...props}>
         <div className="-mb-1 flex md:-mb-5 md:gap-14 md:pr-12 lg:gap-20">
-          {images.map((item) => (
-            <>
+          {images.map((item, i) => (
+            <div key={i}>
               {item.image && (
                 <Motion
                   initial={{ opacity: 0 }}
@@ -37,7 +37,7 @@ export default function Map({ className, ...props }: MapProps) {
                   {item.text}
                 </Text>
               )}
-            </>
+            </div>
           ))}
         </div>
         <div className="bg-primary rounded-2xl border  px-5 py-8 max-md:space-y-5 md:flex md:gap-11 md:p-12 lg:justify-evenly">
@@ -58,9 +58,9 @@ export default function Map({ className, ...props }: MapProps) {
                 </Text>
                 <Text
                   variant="default/default/default"
-                  className="md:max-w-[200px]  md:text-xl"
+                  className="md:max-w-[200px] md:text-xl"
                 >
-                  {item.text}
+                  <span className="whitespace-pre-line">{item.text}</span>
                 </Text>
               </div>
             </div>
@@ -99,14 +99,14 @@ const images = [
 const texts = [
   {
     label: '第一阶段',
-    text: '发射  Coinmarketcap上架记录  3000+持有者',
+    text: '发射\nCoinmarket上架记录\n3000+持有者',
   },
   {
     label: '第二阶段',
-    text: '建立PIE社区  在推特上增加PIE力量  10K+持有者 封装到其他公链上',
+    text: '建立PIE社区\n在推特上增加PIE力量\n10K+持有者\n封装到其他公链上',
   },
   {
     label: '第三阶段',
-    text: '开启NFT质押挖矿  100K+持有者  上线中心化交易所 封装到Pichain链上',
+    text: '开启NFT质押挖矿\n100K+持有者\n登录中心化交易所\n封装到PICHAIN上',
   },
 ];

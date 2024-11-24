@@ -28,7 +28,9 @@ export default async function Img({
     src = props.src.replace('/public/', '/');
   }
 
-  const { base64 } = await getPlaiceholder(Buffer.from(buffer));
+  const { base64 } = await getPlaiceholder(
+    Buffer.isBuffer(buffer) ? buffer : Buffer.from(buffer)
+  );
 
   return (
     <div

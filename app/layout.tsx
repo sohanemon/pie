@@ -37,7 +37,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head className="revert" />
+        <head className="revert">
+          <title>PIE makes Pi great!</title>
+        </head>
         <body
           className={cn(
             'bg-background min-h-screen font-sans antialiased',
