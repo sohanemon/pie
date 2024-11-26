@@ -1,5 +1,6 @@
 import About from './about';
 import Claim from './claim';
+import Donation from './donation';
 import Header from './header';
 import HowTo from './how-to';
 import Map from './map';
@@ -16,6 +17,7 @@ export default async function IndexPage() {
       <HowTo id="如何购买" />
       <Claim id="领取空投" />
       <Pledge id="质押挖矿" />
+      <Donation id='集体捐赠'/>
       <TokenModel id="代币模型" />
       <Miner id='挖矿'/>
       <Model id='代币模型'/>
