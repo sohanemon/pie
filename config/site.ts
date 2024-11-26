@@ -10,6 +10,7 @@ export const siteConfig = {
     { title: '领取空投', href: '/#领取空投' },
     { title: '质押挖矿', href: '/#质押挖矿' },
     { title: '代币模型', href: '/#代币模型' },
+    { title: '挖矿', href: '/#挖矿' },
     { title: '路线图', href: '/#路线图' },
   ],
 };
