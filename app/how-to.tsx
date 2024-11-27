@@ -18,7 +18,6 @@ export default function HowTo({ className, ...props }: HowToProps) {
             src="/public/assets/images/eyebox.svg"
             className="w-9 md:w-12 lg:w-16"
           />
-          ,
         </div>
         <div className="space-y-3.5 lg:space-y-20">
           {cards.map((card, i) => (

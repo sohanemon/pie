@@ -41,10 +41,12 @@ export default function Navbar() {
           </div>
         </div>
         <NavContent />
-        <Button>购买</Button>
-        <Button variant="default/ghost" className="max-md:hidden">
-          English/中文
-        </Button>
+        <div className='flex items-center justify-between'>
+          <Button>购买</Button>
+          <Button variant="default/ghost" className="max-md:hidden">
+            English/中文
+          </Button>
+        </div>
       </nav>
       <AnimatePresence>
         {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
@@ -76,21 +78,54 @@ const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
   return (
     <div>
       <Motion
-        key={'header'}
-        as={'ul'}
-        initial="left"
-        animate="visible"
-        exit={'right'}
-        className="bg-primary absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl p-5 shadow-xl lg:hidden"
+        key="mobile-nav"
+        as="div"
+        initial={{ x: '-100%' }}
+        animate={{ x: 0 }}
+        exit={{ x: '-100%' }}
+        transition={{ duration: 0.3 }}
+        className="fixed inset-y-0 left-0 w-4/5 md:w-3/5 min-h-screen bg-[#A45AFFF2]/95 pt-6 z-50 flex flex-col gap-6 text-white"
       >
-        {siteConfig.nav.map((_) => (
-          <li onClick={() => setIsMenuOpen(false)} key={_.title}>
-            <h3 className="hover:text-background capitalize">
-              <Link href={_.href}>{_.title}</Link>
-            </h3>
-          </li>
-        ))}
+        {/* Close Button */}
+        <div className="flex items-center justify-between pb-6 border-b border-white/20">
+          <Brand className="pl-6" />
+          <div className="pr-6">
+            <Icons.x
+              onClick={() => setIsMenuOpen(false)}
+              size={36}
+              className="text-white cursor-pointer"
+            />
+          </div>
+        </div>
+
+        {/* Navigation Links */}
+        <ul className="flex flex-col gap-6 px-6">
+          {siteConfig.nav.map((_) => (
+            <li key={_.title}>
+              <h3 className="capitalize text-2xl border-b pb-3 border-white/20">
+                <Link
+                  href={_.href}
+                  className="hover:border-b-[3px] border-white pb-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {_.title}
+                </Link>
+              </h3>
+            </li>
+          ))}
+        </ul>
       </Motion>
+
+      {/* Semi-Transparent Background */}
+      <Motion
+        key="overlay"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="fixed inset-0 bg-black/40 min-h-screen z-40"
+        onClick={() => setIsMenuOpen(false)}
+      />
     </div>
   );
 };
