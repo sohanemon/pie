@@ -49,9 +49,6 @@ const PieClipboardInput: React.FC = () => {
       {/* Copied Tooltip */}
       {copied && (
         <span className="absolute top-[-30px] right-4 bg-primary text-purple-500 px-2 py-1 rounded">
-<<<<<<< Tabnine <<<<<<<
-            <ClipboardInput className="w-[320px] sm:w-[496px] bg-[#ad6aff] text-primary" />//+
->>>>>>> Tabnine >>>>>>>// {"conversationId":"ca48ee8b-4944-420f-a16a-2b364936117c","source":"instruct"}
           Copied!
         </span>
       )}

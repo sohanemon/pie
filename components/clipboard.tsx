@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-const ClipboardInput: React.FC = ({className}) => {
+const ClipboardInput: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
