@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-const ClipboardInput: React.FC = ({className}) => {
+const PieClipboardInput: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -13,7 +13,7 @@ const ClipboardInput: React.FC = ({className}) => {
   };
 
   return (
-    <div className={`relative flex items-center justify-between w-[320px] sm:w-[496px] bg-[#ad6aff] text-primary border border-primary rounded-full h-[55px] px-6`}>
+    <div className="relative flex items-center justify-between w-full bg-[#ffdd64] text-black border border-primary rounded-full h-[55px] px-6">
       {/* Address Text */}
       <span className="text-lg sm:text-2xl">
         捐赠地址：<span className="opacity-80">0x....</span>
@@ -35,7 +35,7 @@ const ClipboardInput: React.FC = ({className}) => {
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="currentColor"
-            className="w-5 h-5 text-primary hover:scale-110 transition-transform"
+            className="w-5 h-5 text-black hover:scale-110 transition-transform"
           >
             <path
               strokeLinecap="round"
@@ -49,6 +49,9 @@ const ClipboardInput: React.FC = ({className}) => {
       {/* Copied Tooltip */}
       {copied && (
         <span className="absolute top-[-30px] right-4 bg-primary text-purple-500 px-2 py-1 rounded">
+<<<<<<< Tabnine <<<<<<<
+            <ClipboardInput className="w-[320px] sm:w-[496px] bg-[#ad6aff] text-primary" />//+
+>>>>>>> Tabnine >>>>>>>// {"conversationId":"ca48ee8b-4944-420f-a16a-2b364936117c","source":"instruct"}
           Copied!
         </span>
       )}
@@ -56,4 +59,4 @@ const ClipboardInput: React.FC = ({className}) => {
   );
 };
 
-export default ClipboardInput;
+export default PieClipboardInput;
