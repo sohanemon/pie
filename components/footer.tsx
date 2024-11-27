@@ -24,7 +24,7 @@ export default function Footer({ className, ...props }: FooterProps) {
           src="/public/assets/images/pie-bg.svg"
           className="absolute inset-0"
         />
-        <Text intent={'heading'}>代币模型</Text>
+        <Text intent={'heading'}>PIE 模因力量</Text>
         <Brand className="flex-col md:mt-8" />
         <div className="flex items-center ">
           <Img src="/public/assets/images/insect-happy.svg" className="w-52" />
@@ -61,7 +61,7 @@ export default function Footer({ className, ...props }: FooterProps) {
       </div>
       <footer className="mt-8 border-t border-black/10 py-4">
         <Text className="text-center md:text-2xl">
-          c 2023 by PIE. All rights reserved!
+          c 2024 by PIE. All rights reserved!
         </Text>
       </footer>
     </>

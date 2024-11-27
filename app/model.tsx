@@ -54,9 +54,9 @@ export default function Model({ className, ...props }: ModelProps) {
 
           {/* Centered Inner Content */}
           <div className="absolute text-center">
-            <Text intent="highlight" className="text-4xl text-yellow-400">
+            {/* <Text intent="highlight" className="text-4xl text-yellow-400">
               π
-            </Text>
+            </Text> */}
             <Text variant="sm/default/white" className="mt-2">
               总量 1000亿
             </Text>
