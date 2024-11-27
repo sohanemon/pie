@@ -13,13 +13,15 @@ const ClipboardInput: React.FC = () => {
   };
 
   return (
-    <div className={`relative flex items-center justify-between w-[320px] sm:w-[496px] bg-[#ad6aff] text-primary border border-primary rounded-full h-[55px] px-6`}>
+    <div
+      className={`relative flex items-center justify-between w-[320px] sm:w-[496px] bg-[#ad6aff] text-primary border border-primary rounded-full h-[55px] px-6`}
+    >
       {/* Address Text */}
       <span className="text-lg sm:text-2xl">
         捐赠地址：<span className="opacity-80">0x....</span>
       </span>
 
-      <div className='flex items-center'>
+      <div className="flex items-center">
         {/* Vertical Divider */}
         <div className="h-6 w-[1px] bg-primary mx-3"></div>
 
@@ -31,17 +33,18 @@ const ClipboardInput: React.FC = () => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            fill="none"
+            width="20"
+            height="20"
             viewBox="0 0 24 24"
-            strokeWidth={2}
+            fill="none"
             stroke="currentColor"
-            className="w-5 h-5 text-primary hover:scale-110 transition-transform"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-copy rotate-90"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 8h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2zm2 2h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2z"
-            />
+            <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
           </svg>
         </button>
       </div>
